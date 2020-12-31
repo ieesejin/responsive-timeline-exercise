@@ -1,0 +1,165 @@
+body,
+h1,
+h2,
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.cover {
+  background-color: rgb(12, 12, 66);
+  color: aliceblue;
+  padding-top: 15%;
+  padding-bottom: 10%;
+  text-align: center;
+  transition: padding 0.5s;
+}
+
+.cover-title {
+  font-size: 15vw;
+  font-family: "Bungee Outline", cursive;
+  line-height: 1.5;
+  font-style: italic;
+  transition: font-size 0.5s;
+}
+
+.cover-title span {
+  font-family: "arial";
+  font-size: 0.3em;
+  display: block;
+  font-weight: normal;
+  text-indent: 1.2em;
+}
+
+.wrapper {
+  padding: 0 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.timeline {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.timeline:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 5vw;
+  bottom: 0;
+  width: 6px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.timeline-item {
+  margin-top: 70px;
+}
+
+.card {
+  background-color: rgb(192, 181, 181);
+  padding: 0px 20px 20px 20px;
+  border-radius: 30px;
+  box-shadow: black;
+}
+
+.card-icon {
+  width: 70px;
+  height: auto;
+  vertical-align: top;
+  margin: -35px 30px 0px;
+}
+
+.card-title {
+  position: relative;
+  font-size: 10vw;
+  color: dodgerblue;
+  font-family: "impact";
+  line-height: 1;
+  margin: 20px;
+}
+
+.card-definition {
+  margin: 20px;
+}
+
+.card-definition dt {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 720px) {
+  .timeline:before {
+    background-color: rgb(12, 12, 66);
+  }
+  .timeline-item {
+    width: 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    margin-left: auto;
+    margin-top: -150px;
+    margin-bottom: -200px;
+    text-align: left;
+  }
+
+  .card-title:before {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    background-color: white;
+    border: 6px solid rgb(12, 12, 66);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(50%, -50%);
+    z-index: 10;
+  }
+
+  .card-title {
+    font-size: 9vw;
+    display: inline-block;
+  }
+
+  .cover {
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .cover-title {
+    font-size: 15vw;
+  }
+  .card {
+    position: relative;
+  }
+  .card-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .timeline-item:nth-child(even) .card-icon {
+    left: auto;
+    right: 0;
+  }
+  .timeline-item:nth-child(even) .card-title:before {
+    left: -60px;
+    transform: translate(-50%, -50%);
+  }
+}
